@@ -55,6 +55,6 @@ development:
 #
 production:
   <<: *default
-  database: crowdax_api_production
-  username: crowdax_api
-  password: <%= ENV['CROWDAX_API_DATABASE_PASSWORD'] %>
+  #database: crowdax_api_production
+  #username: crowdax_api
+  #password: <%= ENV['CROWDAX_API_DATABASE_PASSWORD'] %>
