@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
 def home
-    render json: {status: "working"}
+    render json: "Crowdax API V1"
 end
 end
