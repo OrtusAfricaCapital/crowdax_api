@@ -8,7 +8,11 @@ module Api
           lastname: params['user']['lastname'],
           email: params['user']['email'],
           password: params['user']['password'],
-          password_confirmation: params['user']['password_confirmation']
+          password_confirmation: params['user']['password_confirmation'],
+          account_type: params['user']['account_type'],
+          verified: params['user']['verified']
+          
+          
         )
     
         if user

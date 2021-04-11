@@ -1,11 +1,43 @@
 {
   "RSpec": {
     "coverage": {
-      "D:/Play/Code/react_class/crowdax_api/spec/helpers/registrations_helper_spec.rb": {
+      "D:/Play/Code/react_class/crowdax_api/spec/models/user_spec.rb": {
         "lines": [
           1,
           null,
           1,
+          1,
+          1,
+          6,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          2,
+          null,
+          null,
           null
         ]
       },
@@ -353,7 +385,13 @@
       },
       "D:/Play/Code/react_class/crowdax_api/config/initializers/session_store.rb": {
         "lines": [
-          1
+          1,
+          null,
+          0,
+          null,
+          1,
+          null,
+          null
         ]
       },
       "D:/Play/Code/react_class/crowdax_api/config/initializers/wrap_parameters.rb": {
@@ -379,8 +417,18 @@
           1,
           null,
           1,
+          null,
           1,
           1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -390,65 +438,17 @@
           null
         ]
       },
-      "D:/Play/Code/react_class/crowdax_api/app/helpers/home_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "D:/Play/Code/react_class/crowdax_api/app/helpers/registrations_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "D:/Play/Code/react_class/crowdax_api/app/helpers/sessions_helper.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "D:/Play/Code/react_class/crowdax_api/spec/helpers/sessions_helper_spec.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "D:/Play/Code/react_class/crowdax_api/spec/models/user_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
       "D:/Play/Code/react_class/crowdax_api/app/models/user.rb": {
         "lines": [
           1,
+          null,
           1,
           null,
           1,
           1,
+          1,
+          1,
+          null,
           null,
           null
         ]
@@ -459,30 +459,8 @@
           1,
           null
         ]
-      },
-      "D:/Play/Code/react_class/crowdax_api/spec/requests/registrations_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "D:/Play/Code/react_class/crowdax_api/spec/requests/sessions_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1616801581
+    "timestamp": 1617896833
   }
 }
