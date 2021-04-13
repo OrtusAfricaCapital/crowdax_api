@@ -29,4 +29,10 @@ RSpec.describe UserDetail, type: :model do
             expect(subject).to_not be_valid        
         end
     end
+
+    describe "#Association Tests" do
+        it {should belong_to (:User)}
+        
+    end
+    
 end

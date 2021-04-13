@@ -2,6 +2,7 @@
 module Api
   module V1
     class RegistrationsController < ApplicationController
+      before_action :restrict_access
       def create
         user = User.create!(
           firstname: params['user']['firstname'],
@@ -22,8 +23,18 @@ module Api
           }
         else
           render json: { status: 500 }
+        end #ends if clause 
+        
+      end #ends create method 
+
+      
+    private ####### private method
+      def restrict_access #provides secure header token 
+        authenticate_or_request_with_http_token do |token, options|
+          ApiKey.exists?(access_token: token)
         end
-      end
-    end
-  end
-end
+      end #ends restrict_access
+
+    end #ends class 
+  end #ends V1 module
+end #ends API module

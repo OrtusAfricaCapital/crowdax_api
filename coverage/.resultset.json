@@ -75,6 +75,13 @@
           1,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -523,6 +530,21 @@
           null
         ]
       },
+      "D:/Play/Code/react_class/crowdax_api/spec/models/social_medium_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "D:/Play/Code/react_class/crowdax_api/app/models/social_medium.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "D:/Play/Code/react_class/crowdax_api/spec/models/team_spec.rb": {
         "lines": [
           1,
@@ -606,6 +628,12 @@
           1,
           1,
           1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
           null,
           null,
           null
@@ -911,6 +939,6 @@
         ]
       }
     },
-    "timestamp": 1618317855
+    "timestamp": 1618321861
   }
 }
