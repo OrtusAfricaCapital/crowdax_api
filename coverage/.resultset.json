@@ -437,6 +437,92 @@
           null
         ]
       },
+      "D:/Play/Code/react_class/crowdax_api/spec/models/category_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "D:/Play/Code/react_class/crowdax_api/app/models/category.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "D:/Play/Code/react_class/crowdax_api/spec/models/competitor_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "D:/Play/Code/react_class/crowdax_api/app/models/competitor.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
       "D:/Play/Code/react_class/crowdax_api/spec/models/team_spec.rb": {
         "lines": [
           1,
@@ -485,7 +571,7 @@
           1,
           1,
           1,
-          null,
+          1,
           null
         ]
       },
@@ -825,6 +911,6 @@
         ]
       }
     },
-    "timestamp": 1618274343
+    "timestamp": 1618317855
   }
 }

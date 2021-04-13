@@ -10,13 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_12_204532) do
+ActiveRecord::Schema.define(version: 2021_04_13_132434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "api_keys", force: :cascade do |t|
     t.string "access_token"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.text "market_cap"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "competitors", force: :cascade do |t|
+    t.integer "venture_id"
+    t.string "name"
+    t.text "difference"
+    t.string "advantage"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "social_media", force: :cascade do |t|
+    t.integer "venture_id"
+    t.integer "user_id"
+    t.string "linkedin"
+    t.string "facebook"
+    t.string "twitter"
+    t.string "instagram"
+    t.string "youtube"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -107,6 +136,7 @@ ActiveRecord::Schema.define(version: 2021_04_12_204532) do
     t.string "activation_status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "category_id"
   end
 
 end
