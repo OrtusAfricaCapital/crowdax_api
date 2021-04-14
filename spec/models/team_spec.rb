@@ -31,9 +31,12 @@ RSpec.describe Team, type: :model do
     subject.role = nil 
     expect(subject).to_not be_valid  
   end
-   
-  
+ end
+
+ context "a context" do
+  it { should belong_to :venture } 
    
  end
+ 
  
 end

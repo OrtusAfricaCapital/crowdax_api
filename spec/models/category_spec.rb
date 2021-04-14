@@ -13,12 +13,11 @@ RSpec.describe Category, type: :model do
 
     it "not valid without name" do
       subject.name = nil 
-      expect(subject).to_not be_valid  
-      
-    end
-    
-    
+      expect(subject).to_not be_valid 
+    end  
   end
-  
 
+  context "#Associations Test" do
+    it { should have_many :ventures }     
+  end
 end

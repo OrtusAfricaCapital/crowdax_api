@@ -27,4 +27,9 @@ RSpec.describe VentureDetail, type: :model do
             expect(subject).to_not be_valid
         end
     end
+
+    context "#Associations Tests " do
+        it { should belong_to :venture }         
+    end
+    
 end

@@ -5,13 +5,12 @@ RSpec.describe UserDetail, type: :model do
     context '#validation tests' do 
         subject{
             UserDetail.new(
-                user_id: 23,
+                user_id: 1,
                 phonenumber: "0704520128",
                 bio: "Software developer", 
                 date_of_birth: "09/02/1990",
                 country: "uganda",
                 address: "katale sseguku ",
-                social_media_id: 333, 
                 cover_photo: "https://photos.com/1",
                 profile_photo: "https://photos.com/2",
                 website: "www.jjingokisakye.com",
@@ -30,9 +29,9 @@ RSpec.describe UserDetail, type: :model do
         end
     end
 
-    describe "#Association Tests" do
-        it {should belong_to (:User)}
-        
+    context "#Association Tests" do
+        it {should belong_to (:user)}        
     end
+    
     
 end

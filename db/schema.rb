@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_13_132434) do
+ActiveRecord::Schema.define(version: 2021_04_14_195444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,7 +67,6 @@ ActiveRecord::Schema.define(version: 2021_04_13_132434) do
     t.date "date_of_birth"
     t.string "country"
     t.string "address"
-    t.integer "social_media_id"
     t.string "cover_photo"
     t.string "profile_photo"
     t.string "website"
@@ -128,9 +127,6 @@ ActiveRecord::Schema.define(version: 2021_04_13_132434) do
     t.date "initial_investing_date"
     t.date "last_investing_date"
     t.decimal "minimum_investment_amount"
-    t.integer "team_id"
-    t.integer "competitor_id"
-    t.integer "investment_id"
     t.string "approval_status"
     t.date "approved_date"
     t.string "activation_status"

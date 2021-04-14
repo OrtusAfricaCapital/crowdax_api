@@ -14,5 +14,6 @@ class User < ApplicationRecord
   validates :verified, presence: true 
   
   #associations
-  has_one :userdetail
+  has_one :user_detail
+  has_many :ventures
 end

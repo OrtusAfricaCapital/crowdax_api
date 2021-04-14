@@ -29,10 +29,10 @@ context "#Validation Tests" do
     subject.difference = nil 
     expect(subject).to_not be_valid  
   end
-  
-  
-
 end
 
+context "#Associations" do
+  it { should belong_to :venture }   
+end
   
 end
