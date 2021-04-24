@@ -55,5 +55,21 @@ describe "#Associations " do
   it { should have_many :ventures }
 end
 
+describe "#venture associations" do
+
+  before do
+    @user.save
+    3.times { FactoryBot.create :venture, user: @user }
+  end
+
+  it "destroys the associated ventures on self destruct" do
+    ventures = @user.ventures
+    @user.destroy
+    ventures.each do |venture|
+      expect(Venture.find(venture.id)).to raise_error ActiveRecord::RecordNotFound
+    end
+  end
+end
+
     
 end

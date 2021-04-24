@@ -15,5 +15,5 @@ class User < ApplicationRecord
   
   #associations
   has_one :user_detail
-  has_many :ventures
+  has_many :ventures, dependent: :destroy
 end

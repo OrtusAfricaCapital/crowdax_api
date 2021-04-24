@@ -54,7 +54,22 @@ RSpec.describe Venture, type: :model do
         #     expect(subject).to_not be_valid
         # end
 
-        
+        it { should respond_to(:user_id) }
+        it { should respond_to(:name) }
+        it { should respond_to(:short_description) }
+        it { should respond_to(:logo) }
+        it { should respond_to(:sector) }
+        it { should respond_to(:investment_stage) }
+        it { should respond_to(:total_investors) }
+        it { should respond_to(:amount_invested) }
+        it { should respond_to(:initial_investing_date) }
+        it { should respond_to(:last_investing_date) }
+        it { should respond_to(:minimum_investment_amount) }
+        it { should respond_to(:activation_status) }
+        it { should respond_to(:approval_status) }
+        it { should respond_to(:approved_date) }
+
+
         it { should validate_presence_of :user_id }        
         it { should validate_presence_of :name }
         
