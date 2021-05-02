@@ -1,8 +1,39 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+require 'capistrano-db-tasks'
+
+#FIXME add your app name here
+set :application, 'crowdax_api'
+#FIXME replace 'git@github.com:YOUR-GIT-REPO-HERE' with your git clone url
+set :repo_url, 'git@github.com:OrtusAfricaCapital/crowdax_api.git'
+#FIXME add location on the server here
+set :deploy_to, '/home/deploy/aws-crowdax'
+set :branch, ENV['BRANCH'] if ENV['BRANCH']
+
+set :linked_files, %w{config/database.yml config/master.key}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+
+set :keep_releases, 3
+set :keep_assets, 3
+
+set :db_local_clean, true
+set :db_remote_clean, true
+
+namespace :deploy do
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
+
+  after :publishing, 'deploy:restart'
+  after :finishing, 'deploy:cleanup'
+end
+
+#set :application, "my_app_name"
+#set :repo_url, "git@example.com:me/my_repo.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

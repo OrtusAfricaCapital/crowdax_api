@@ -1,3 +1,13 @@
+server '18.237.57.113', user: 'crowdax', roles: %w{web app db}
+set :rails_env, 'production'
+
+
+
+
+
+
+
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
