@@ -21,14 +21,6 @@ ActiveRecord::Schema.define(version: 2021_04_21_115617) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.text "market_cap"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "competitors", force: :cascade do |t|
     t.integer "venture_id"
     t.string "name"

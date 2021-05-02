@@ -1,7 +1,7 @@
 FactoryBot.define do
     factory :venture do
         user 
-        name {"lecodesoft"}
+        name {Faker::Name.unique.name}
         short_description {"software company"}
         logo {"https://lecodesoft.logo.png"}
         sector {"Tech"}

@@ -72,7 +72,7 @@ RSpec.describe Venture, type: :model do
 
         it { should validate_presence_of :user_id }        
         it { should validate_presence_of :name }
-        
+        it { should validate_uniqueness_of(:name) }
         it { should validate_presence_of :short_description }        
         it { should validate_presence_of :sector }
         it { should validate_presence_of :investment_stage }        

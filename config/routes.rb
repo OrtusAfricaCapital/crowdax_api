@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   root 'static#home'
   
-  namespace :api do
+  namespace :api, defaults: { format: :json } do
     namespace :v1 do
 
       resources :sessions, only: [:create]
@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       delete :logout, to: "sessions#logout"
       get :logged_in, to: "sessions#logged_in"
       
-      resources :ventures, only: [:show]
+      resources :ventures #, :only [:show, :index, :create]
         
     end
   end

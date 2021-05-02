@@ -2,7 +2,7 @@ class Venture < ApplicationRecord
 
     #validates
     validates :user_id, presence: true
-    validates :name, presence: true
+    validates :name, presence: true, uniqueness: true
     validates :short_description, presence: true
     validates :sector, presence: true
     validates :investment_stage, presence: true
