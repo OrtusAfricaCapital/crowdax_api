@@ -5,8 +5,7 @@ FactoryBot.define do
         need {"Covid viruses lasting on eats "} 
         solution {"Auto Cleaning of foods"} 
         milestones {["buy product", "start using"]}
-        how_it_works {["buy", "use"]}
-        traction {" There's 20% increase from 2015"}
+        how_it_works {["buy", "use"]}      
         video_pitch {["https://dkfjjkfs.com"]}
         featured_images {["https://dkfjjkfs.com"]}
         founded_date {5.years.ago }

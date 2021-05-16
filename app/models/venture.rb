@@ -15,4 +15,12 @@ class Venture < ApplicationRecord
     has_many :competitors
     has_many :teams 
     
+    after_initialize :set_defaults
+
+    def set_defaults
+        self.approval_status ||= "false"
+        self.total_investors ||= 0
+        self.amount_invested ||= 0
+        self.logo ||= "https://picsum.photos/680/260?grayscale"
+    end
 end

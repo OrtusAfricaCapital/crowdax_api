@@ -30,28 +30,29 @@ RSpec.describe "Api::V1::Ventures", type: :request do
   end
 
   describe "POST #create /venture" do 
-    it 'create a new book' do 
-      post '/api/v1/ventures',  
-      params: {
-        venture: {
-        user_id: 1, 
+    
+    before(:each) do
+      current_user = FactoryBot.create :user
+
+      venture_params = {
+        user_id: current_user.id, 
         name: 'The test project',
         short_description: "software company",
         logo: "https://lecodesoft.logo.png",
         sector: "Tech",
         investment_stage: "Angel",
-        total_investors: 20,
-        amount_invested: 100.20, 
-        initial_investing_date:  2.months.ago,
-        last_investing_date: 1.days.ago,
-        minimum_investment_amount: 10,
-        activation_status: "active",
-        approval_status: "approved", 
-        approved_date: 2.months.ago
-        }
-      }     
-      
-      expect(response).to have_http_status(:created)
+        traction: "This is it",
+        location: "Kampala",
+        referred_by: "Ortus Africa Capital",
+        pitchdeck: "https://fackd.com"
+      }
+      post :create, user_id: current_user.id, venture: venture_params
+
+    end
+
+    it 'create a new venture' do 
+      venture_response = json_response[:venture]
+      expect(venture_response[:id]).to be_present
     end
   end
 

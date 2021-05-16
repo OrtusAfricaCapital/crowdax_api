@@ -11,8 +11,7 @@ module Api
           password: params['user']['password'],
           password_confirmation: params['user']['password_confirmation'],
           account_type: params['user']['account_type'],
-          verified: params['user']['verified']        
-          
+          ##verified: params['user']['verified']      
         )
     
         if user

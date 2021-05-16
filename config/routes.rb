@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       delete :logout, to: "sessions#logout"
       get :logged_in, to: "sessions#logged_in"
       
-      resources :ventures #, :only [:show, :index, :create]
+      resources :ventures, only: [:index, :show, :create, :update, :destroy]
         
     end
   end

@@ -68,7 +68,11 @@ RSpec.describe Venture, type: :model do
         it { should respond_to(:activation_status) }
         it { should respond_to(:approval_status) }
         it { should respond_to(:approved_date) }
-
+        it { should respond_to(:traction) }
+        it { should respond_to(:location) }
+        it { should respond_to(:referred_by) }
+        
+        it { should respond_to(:pitchdeck) }
 
         it { should validate_presence_of :user_id }        
         it { should validate_presence_of :name }

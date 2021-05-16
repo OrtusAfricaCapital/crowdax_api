@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_21_115617) do
+ActiveRecord::Schema.define(version: 2021_05_10_033735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,7 +96,6 @@ ActiveRecord::Schema.define(version: 2021_04_21_115617) do
     t.text "solution"
     t.string "milestones", default: [], array: true
     t.string "how_it_works", default: [], array: true
-    t.string "traction"
     t.string "video_pitch", default: [], array: true
     t.string "featured_images", default: [], array: true
     t.date "founded_date"
@@ -132,6 +131,10 @@ ActiveRecord::Schema.define(version: 2021_04_21_115617) do
     t.string "activation_status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "traction"
+    t.string "location"
+    t.string "referred_by"
+    t.string "pitchdeck"
   end
 
   add_foreign_key "orders", "users"
