@@ -30,7 +30,17 @@ class Api::V1::VenturesController < ApplicationController
     render json: {status: 'SUCCESS', message: 'Deleted venture', data: venture}, status: :ok
   end
 
- 
+  def update
+    venture = Venture.find(params[:id])
+    if venture.update(venture_params)
+      render json: {data: venture}
+    else
+      render json: {status: 'Error', message: 'Venture not updated', data: venture.errors}, status: :unprocessable_entity
+    end
+  end
+
+
+
   private
 
   def venture_params
