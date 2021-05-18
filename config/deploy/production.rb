@@ -1,4 +1,4 @@
-server '18.237.57.113', user: 'crowdax', roles: %w{web app db}
+server '34.222.74.41', user: 'crowdax', roles: %w{web app db}
 set :rails_env, 'production'
 
 
