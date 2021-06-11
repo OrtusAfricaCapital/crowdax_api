@@ -19,10 +19,10 @@ group :development, :test do
 end
 
 group :development do
-  gem 'capistrano', '~> 3.11', require: false
-  gem 'capistrano-rails', '~> 1.5', require: false
-  gem 'capistrano-rbenv', '~> 2.1'
-  gem 'capistrano-db-tasks', require: false
+  gem 'capistrano', '~> 3.11'
+  gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
   
   gem 'web-console', '>= 4.1.0'
   gem 'rack-mini-profiler', '~> 2.0'

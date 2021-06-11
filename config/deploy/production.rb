@@ -1,37 +1,4 @@
 
-# ------------------------------------
-server "34.222.74.41",
-  user: "deploy",
-  roles: %w{web app db},
-  ssh_options: {
-    keys: %w(/aws_crowdax_prod_1.pem),
-    forward_agent: false,
-    auth_methods: %w(publickey password)
-   
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# server '34.222.74.41', user: 'crowdax', roles: %w{web app db}
-# set :rails_env, 'production'
-
-
-
-
-
-
 
 
 # server-based syntax
@@ -85,13 +52,12 @@ server "34.222.74.41",
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-# server "example.com",
-#   user: "user_name",
-#   roles: %w{web app},
-#   ssh_options: {
-#     user: "user_name", # overrides user setting above
-#     keys: %w(/home/user_name/.ssh/id_rsa),
-#     forward_agent: false,
-#     auth_methods: %w(publickey password)
-#     # password: "please use keys"
-#   }
+server "34.222.74.41",
+  user: "deploy",
+  roles: %w{web app},
+  ssh_options: {
+    keys: %w(/aws_crowdax_prod_1.pem),
+    forward_agent: false,
+    auth_methods: %w(publickey password)
+   
+  }
