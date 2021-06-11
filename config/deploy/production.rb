@@ -1,5 +1,31 @@
-server '34.222.74.41', user: 'crowdax', roles: %w{web app db}
-set :rails_env, 'production'
+
+# ------------------------------------
+server "34.222.74.41",
+  user: "deploy",
+  roles: %w{web app db},
+  ssh_options: {
+    keys: %w(/aws_crowdax_prod_1.pem),
+    forward_agent: false,
+    auth_methods: %w(publickey password)
+   
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# server '34.222.74.41', user: 'crowdax', roles: %w{web app db}
+# set :rails_env, 'production'
 
 
 
