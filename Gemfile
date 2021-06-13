@@ -11,7 +11,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  #gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~>5.0.0'
   gem 'shoulda-matchers', '~> 4.0'
   gem "factory_bot_rails"
@@ -32,7 +32,9 @@ group :development do
 
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+platform :mswin, :mingw, :x64_mingw do
+  gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+end
 gem 'bcrypt', '~> 3.1', '>=3.1.12'
 gem 'rack-cors', :require => 'rack/cors'
 
